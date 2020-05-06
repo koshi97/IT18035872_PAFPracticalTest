@@ -1,12 +1,12 @@
 package com;
 
-import com.Appointment;
+//import com.Appointment;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -53,7 +53,8 @@ private static final long serialVersionUID = 1L;
 		String output = appObj.insertAppointment(request.getParameter("appNo"),
 				request.getParameter("appType"),
 				request.getParameter("appDate"),
-				request.getParameter("appDescription"));
+				request.getParameter("appDescription"),
+				request.getParameter("appPrice"));
 		
 				response.getWriter().write(output);	
 	}
@@ -71,7 +72,8 @@ private static final long serialVersionUID = 1L;
 		paras.get("appNo").toString(),
 		paras.get("appType").toString(),
 		paras.get("appDate").toString(),
-		paras.get("appDescription").toString());
+		paras.get("appDescription").toString(),
+		paras.get("appPrice").toString());
 		response.getWriter().write(output);
 		}
 
